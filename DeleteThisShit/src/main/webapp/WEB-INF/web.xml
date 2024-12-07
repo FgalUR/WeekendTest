@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.evilcorp.deletethisshit.HelloServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Main</servlet-name>]
+        <servlet-class>com.evilcorp.deletethisshit.Main</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Pidors</servlet-name><!--ссылка задаётся в самом файле-->
+        <servlet-class>com.evilcorp.deletethisshit.Pidors</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TestClass</servlet-name>
+        <servlet-class>com.evilcorp.deletethisshit.TestClass</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestClass</servlet-name>
+        <url-pattern>/TestClass</url-pattern>
+        <servlet-nameA>index</servlet-nameA>
+        <jsp-file>/index.jsp</jsp-file>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hiNiga</url-pattern><!-- Способ задания ссылки на сервелет класс при помощи mapping-->
+    </servlet-mapping>
+</web-app>
+<!---->
